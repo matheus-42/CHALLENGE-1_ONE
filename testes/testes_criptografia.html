@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>teste criptografia</title>
+    <h1>APENAS TESTANDO ISSO AQUI</h1>
+</head>
+
+<body>
+    <form id="form" name="" method="" action="">
+        <p><label for="texto">Digite Aqui:</label>
+          <input type="text" name="texto" id="texto" maxlength="80" /></p>
+        <button type="submit">Enviar</button>
+      </form>
+
+<script>
+const form = document.getElementById('form');
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  const [texto] = ["texto"].map(name => form.querySelector(`[name="${name}"]`).value);
+  document.write(`${texto}`);
+
+});
+
+var chave = ["a", "e", "i", "o", "u"];
+var novaChave = [chave[0].replace("a", "ai"), chave[1].replace("e", "enter"),
+    chave[2].replace("i", "imes"),  chave[3].replace("o", "ober"), chave[4].replace("u", "ufat")];
+
+
+//alert(`${texto}`);
+
+// var chave1 = "a";
+// var chave2 = "e";
+// var chave3 = "i";
+// var chave4 = "o";
+// var chave5 = "u";
+
+// var novaChave1 = chave1.replace("a", "ai");
+// var novaChave2 = chave2.replace("e", "enter");
+// var novaChave3 = chave3.replace("i", "imes");
+// var novaChave4 = chave4.replace("o", "ober");
+// var novaChave5 = chave5.replace("u", "ufat");
+
+
+
+
+</script>
+
+</body>
+
+</html>
