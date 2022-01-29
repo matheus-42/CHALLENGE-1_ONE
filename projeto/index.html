@@ -5,28 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENIGMA</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" 
-    href="D:\Matheus Cândido\Documents\1-ORACLE_ONE\CHALLENGE\desafioLogica_1\projeto\imagens\emblema.ico">
+    href="../projeto/imagens/emblema.ico">
 </head>
 
 <body>
-    <h1 class="titulo">ENIGMA</h1>
+    <h1 class="titulo">SECRET-CODE</h1>
+    <!--<h2 class="titulo2">CRYPTOGRAPHY CHALLENGE</h2>-->
 
     <main class="main">
-        <section class="form box">
-            <h2>Apenas letras minúsculas e sem acento!</h2>
-            <input class="text-input" type="text" name="inputTexto" id="inputTexto" placeholder="Insira seu texto">
-            <button class="btn" id="btnCripto">CRIPTOGRAFAR</button>
-            <button class="btn" id="btnDescripto">DESCRIPTOGRAFAR</button>
-        </section>
+        <div class="div">
+            <section class="form box">
+                <h3 class="titulo2">APENAS LETRAS MINÚSCULAS E SEM ACENTO!</h3>
+                <input class="text-input" type="text" name="inputTexto" id="inputTexto" placeholder="INSIRA AQUI SEU TEXTO">
+                <button class="btn1" id="btnCripto">CRIPTOGRAFAR</button>
+                <button class="btn2" id="btnDescripto">DESCRIPTOGRAFAR</button>
+            </section>
+            <div class="div1">
+                <img id="logo" src="../projeto/imagens/logo.png">
+            </div>
+            <section class="output">
+                <h3 class="titulo2">MENSAGEM CRIPTOGRAFADA:</h3>
+                <input class="text-input" type="text" id="msgSaida">
+                <button class="btn3" id="btnCopia">COPIAR</button>
+                <button class="btn4" id="btnLimpa">LIMPAR</button>
 
-        <section>
-            <h2>Mensagem Criptografada</h2>
-            <input class="text-input" type="text" id="msgSaida">
-            <button class="btn" id="btnCopia">COPIAR</button>
-            <button class="btn" id="btnLimpa">LIMPAR</button>
-
-        </section>
+            </section>
+        </div>
     </main>
+    <footer>
+        <div class="social">
+            <img src="../projeto/imagens/emblema_rodape2.png" class="imgRodape">
+            <a href="https://github.com/matheus-42">
+                <img src="../projeto/imagens/github.png" id="github">
+            </a>
+            <a href="https://www.linkedin.com/in/candidomatheus/">
+                <img src="../projeto/imagens/linkedin.png" id="linkedin">
+            </a>
+            <p id="nome">&copy; Matheus Cândido de Oliveira</p>
+            <p id="data">Desenvolvido em 01/2022</p>
+        </div>
+    </footer>
 </body>
 </html>
