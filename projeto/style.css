@@ -24,10 +24,26 @@ body{
   font-size: 50px;
   padding: 15px;
   width: 30vw;
+  
   margin: auto;
   text-align: center;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color:#FF9600;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: black;
+}
+
+.subTitulo{
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  /*font-size: 50px;*/
+ 
+  
+  
+  top: 19%;
+  right: 40.5%;
+  position: absolute;
+  /*text-align: center;*/
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: white;
   -webkit-text-fill-color: black;
 }
 
@@ -187,12 +203,13 @@ body{
   background-color: black;
   border-radius: 15px;
 
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: #202020;
   /*font-weight: bolder;*/
   
 }
 
 .text-input:focus{
+  -webkit-text-fill-color: white;
   box-shadow: 0px 0px 20px white, 0px 0px 10px white;
   background-color: #202020;
 }
@@ -233,6 +250,7 @@ footer{
   top: 36%;
   position: absolute;
 }
+
 #linkedin{
   right: 31.7%;
   top: 36.3%;
@@ -255,4 +273,21 @@ footer{
   top: 45%;
   position: absolute;
   /*background-color: black;*/
+}
+header{
+  background-color: none;
+  text-align: center;
+  object-position: center;
+}
+.cabecalho{
+  height: 50px;
+  text-align: center;
+  object-position: center;
+  background-color:black;
+}
+#oracleAlura{
+width: 22%;
+position: absolute;
+right: 75%;
+top: 0.9%;
 }
