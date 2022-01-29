@@ -1,10 +1,10 @@
     function cripto() {
         textoCripto = input.value
-        .replace(/e/gi, "enter")
-        .replace(/i/gi, "imes")
-        .replace(/a/gi, "ai")
-        .replace(/o/gi, "ober")
-        .replace(/u/gi, "ufat");
+            .replace(/e/gi, "enter")
+            .replace(/i/gi, "imes")
+            .replace(/a/gi, "ai")
+            .replace(/o/gi, "ober")
+            .replace(/u/gi, "ufat");
         var textoFinal = document.querySelector("#msg");
         textoFinal.value = textoCripto;
         textoFinal.focus();
@@ -31,10 +31,10 @@
     }
     function limpa(){
         var limpa = document.querySelector("#input-texto");
-        limpa.value = " ";
-        limpa.focus();
         var limpa = document.querySelector("#msg");
-        limpa.value = " ";
+        limpa.value = "";
+        limpa.focus();
+        //limpa.value = "";//
     }
 
     var input = document.querySelector("#input-texto");
