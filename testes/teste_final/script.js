@@ -1,5 +1,5 @@
     function cripto() {
-        textoCripto = input.value
+        var textoCripto = input.value
             .replace(/e/gi, "enter")
             .replace(/i/gi, "imes")
             .replace(/a/gi, "ai")
@@ -12,12 +12,13 @@
         return(textoCripto); 
     }
     function decripto() {
-        textoDecripto = input.value
+        var textoDecripto = input.value
         .replace(/enter/gi, "e")
         .replace(/imes/gi, "i")
         .replace(/ai/gi, "a")
         .replace(/ober/gi, "o")
         .replace(/ufat/gi, "u");
+
         var textoFinal = document.querySelector("#msg");
         textoFinal.value = textoDecripto;
         textoFinal.focus();
@@ -31,19 +32,48 @@
     }
     function limpa(){
         var limpa = document.querySelector("#input-texto");
-        var limpa = document.querySelector("#msg");
-        limpa.value = "";
+        limpa.value = " ";
         limpa.focus();
-        //limpa.value = "";//
+        var limpa = document.querySelector("#msg");
+        limpa.value = " ";
+    }
+//-------------------------------------------------BLOCO DE FUNÇÕES "ORIGINAL"-------------------------------------------------//
+
+function startDecript() {
+  var texto = document.querySelector("#input-texto");
+  var wordsKeys = ['enter', 'imes', 'ai', 'ober', 'ufat'];
+  var textoValor = texto.value;
+  var verify = wordsKeys.some(elementoArray => textoValor.includes(elementoArray));
+
+  if (verify) {
+    decripto();
+    } else {
+        alert('A mensagem não está criptografada');
+        limpa();
     }
 
+}//FUNÇÃO PRONTA//
+
+
+
+
+
+
+
+
+
+
+
+
+    
+//-------------------------------------------------BLOCO DE VARIAVEIS "ORIGINAL"-------------------------------------------------//
     var input = document.querySelector("#input-texto");
     //var input2 = document.querySelector("#input-texto");
 
     var button1 = document.querySelector("#btn-cripto");
     button1.onclick = cripto;
     var button2 = document.querySelector("#btn-descripto");
-    button2.onclick = decripto;
+    button2.onclick = startDecript;
     var button3 = document.querySelector("#btn-copy");
     button3.onclick = copiar;
     var button4 = document.querySelector("#limpa");

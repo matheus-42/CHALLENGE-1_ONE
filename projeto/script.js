@@ -1,5 +1,5 @@
 function cripto() {
-    textoCripto = input.value
+   var textoCripto = input.value
         .replace(/e/gi, "enter")
         .replace(/i/gi, "imes")
         .replace(/a/gi, "ai")
@@ -12,18 +12,18 @@ function cripto() {
     return(textoCripto);
 }
 
-function desCripto() {
-    textoDescripto = input.value
+function deCripto() {
+    var textoDecripto = input.value
         .replace(/enter/gi, "e")
         .replace(/imes/gi, "i")
         .replace(/ai/gi, "a")
         .replace(/ober/gi, "o")
         .replace(/ufat/gi, "u");
     var textoFinal = (document.querySelector("#msgSaida"));
-    textoFinal.value = (textoDescripto);
+    textoFinal.value = (textoDecripto);
     textoFinal.focus();
-    console.log(textoDescripto);
-    return(textoDescripto);
+    console.log(textoDecripto);
+    return(textoDecripto);
 }
 
 function copiar() {
@@ -38,4 +38,18 @@ function limpa() {
     limpa.focus();
     var limpa = (document.querySelector("#msgSaida"));
     limpa.value = ("");
+}
+
+function startDeCripto() {
+    var textoStart = (document.querySelector("#inputTexto"));
+    var palavrasChaves = ['enter', 'imes', 'ai', 'ober', 'ufat'];
+    var textoValor = (textoStart.value);
+    var verifica = palavrasChaves.some(chaves => textoValor.includes(chaves));
+    if(verifica){
+        deCripto(); 
+    }
+    else{
+        alert("TEXTO NÃO CRIPTOGRAFADO!");
+        limpa();
+    }
 }
