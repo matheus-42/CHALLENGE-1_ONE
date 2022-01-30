@@ -1,4 +1,5 @@
-function cripto() {
+//--------------------------------------BLOCO DE FUNÇÕES--------------------------------------//
+function cripto() {//--CODIFICADOR--//
    var textoCripto = input.value
         .replace(/e/gi, "enter")
         .replace(/i/gi, "imes")
@@ -12,7 +13,7 @@ function cripto() {
     return(textoCripto);
 }
 
-function deCripto() {
+function deCripto() {//--DECODIFICADOR--//
     var textoDecripto = input.value
         .replace(/enter/gi, "e")
         .replace(/imes/gi, "i")
@@ -26,13 +27,15 @@ function deCripto() {
     return(textoDecripto);
 }
 
-function copiar() {
-    var copiar = (doument.querySelector("#msgSaida"));
-    navigator.clipboard.writeText(copiar.value);
-    return (copiar);
+function copia() {//--COPIA O TEXTO--//
+    var copia = (doument.querySelector("#msgSaida"));
+    navigator.clipboard.writeText(copia.value);
+    return (copia);
+    alert("TEXTO COPIADO!");
+    limpa();
 }
 
-function limpa() {
+function limpa() {//--LIMPA OS CAMPOS E "SELECIONA" O CAMPO ONDE SE INSERE O TEXTO--//
     var limpa = (document.querySelector("#inputTexto"));
     limpa.value = ("");
     limpa.focus();
@@ -40,7 +43,7 @@ function limpa() {
     limpa.value = ("");
 }
 
-function startDeCripto() {
+function startDeCripto() {//--VERIFICA SE O TEXTO INSERIO ESTÁ CODIFICADO E INICIA O DECODIFICADOR--//
     var textoStart = (document.querySelector("#inputTexto"));
     var palavrasChaves = ['enter', 'imes', 'ai', 'ober', 'ufat'];
     var textoValor = (textoStart.value);
@@ -53,3 +56,19 @@ function startDeCripto() {
         limpa();
     }
 }
+//--------------------------------------------------------------------------------------------//
+//-------------------------------------BLOCO DE VARIÁVEIS------------------------------------//
+var input = (document.querySelector("#inputTexto"));
+
+var botaoCripto = (document.querySelector("#btnCripto"));
+botaoCripto.onclick = (cripto);
+
+var botaoDeCripto = (document.querySelector("#btnDecripto"));
+botaoDeCripto.onclick = (startDeCripto);
+
+var botaoCopia = (document.querySelector("#btnCopia"));
+botaoCopia.onclick = (copia);
+
+var botaoLimpa = (document.querySelector("#btnLimpa"));
+botaoLimpa.onclick = (limpa);
+//--------------------------------------------------------------------------------------------//
