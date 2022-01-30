@@ -45,8 +45,10 @@ function startDecript() {
   var textoValor = texto.value;
   var verify = wordsKeys.some(elementoArray => textoValor.includes(elementoArray));
 
-  if (verify) {
-    decripto();
+  if (input.value== "") {
+        alert("DIGITE ALGUMA COISA");
+    }else if(verify){
+        decripto();
     } else {
         alert('A mensagem não está criptografada');
         limpa();
