@@ -1,16 +1,16 @@
-    function cripto() {
-        var textoCripto = input.value
-            .replace(/e/gi, "enter")
-            .replace(/i/gi, "imes")
-            .replace(/a/gi, "ai")
-            .replace(/o/gi, "ober")
-            .replace(/u/gi, "ufat");
-        var textoFinal = document.querySelector("#msg");
-        textoFinal.value = textoCripto;
-        textoFinal.focus();
-        console.log(textoCripto);
-        return(textoCripto); 
-    }
+function cripto() {//--CODIFICADOR--//
+   var textoCripto = input.value
+        .replace(/e/gi, "enter")
+        .replace(/i/gi, "imes")
+        .replace(/a/gi, "ai")
+        .replace(/o/gi, "ober")
+        .replace(/u/gi, "ufat");
+    var textoFinal = (document.querySelector("#msg"));
+    textoFinal.value = (textoCripto);
+    textoFinal.focus();
+    console.log(textoCripto);
+    return(textoCripto);
+}
     function decripto() {
         var textoDecripto = input.value
         .replace(/enter/gi, "e")

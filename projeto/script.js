@@ -27,10 +27,10 @@ function deCripto() {//--DECODIFICADOR--//
     return(textoDecripto);
 }
 
-function copia() {//--COPIA O TEXTO--//
-    var copia = (doument.querySelector("#msgSaida"));
+function copia(){
+    var copia = (document.querySelector("#msgSaida"));
     navigator.clipboard.writeText(copia.value);
-    return (copia);
+    //return(copia);
     alert("TEXTO COPIADO!");
     limpa();
 }
@@ -58,7 +58,7 @@ function startDeCripto() {//--VERIFICA SE O TEXTO INSERIO ESTÁ CODIFICADO E INI
 }
 //--------------------------------------------------------------------------------------------//
 //-------------------------------------BLOCO DE VARIÁVEIS------------------------------------//
-var input = (document.querySelector("#inputTexto"));
+var input = document.querySelector("#inputTexto");
 
 var botaoCripto = (document.querySelector("#btnCripto"));
 botaoCripto.onclick = (cripto);
